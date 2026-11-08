@@ -476,3 +476,28 @@ html[lang="ru"] .logo small{letter-spacing:.14em}
 .tour-hero .inner{padding-top:200px}
 .tour-hero .inner .lead{max-width:640px}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+/* mobile header: compact logo so Contact button + language switch fit */
+@media (max-width:760px){
+  .nav,.site-header.fixed .nav{gap:10px;height:72px}
+  .logo{gap:9px;min-width:0}
+  .logo svg{width:36px;height:24px}
+  .logo b{font-size:19px}
+  .logo small{font-size:6.5px;letter-spacing:.18em;margin-top:4px}
+  html[lang="ru"] .logo small{letter-spacing:.06em}
+  .nav-tools{margin-left:auto;gap:12px}
+  .nav-tools .lang{display:flex;font-size:13px;gap:4px}
+  .nav-tools .btn-sm{height:38px;padding:0 14px;font-size:13px;gap:6px}
+  .nav-tools .btn-sm svg{display:none}
+}
+@media (max-width:420px){
+  .site-header .wrap{padding-left:16px;padding-right:16px}
+  .logo small{display:none}
+  .logo b{font-size:20px}
+}
+@media (max-width:360px){
+  .logo{gap:7px}.logo svg{width:30px;height:20px}.logo b{font-size:18px}
+  .nav-tools{gap:8px}
+  .nav-tools .lang{font-size:12px}
+  .nav-tools .btn-sm{padding:0 11px;font-size:12px}
+}
