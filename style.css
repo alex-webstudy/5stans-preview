@@ -736,3 +736,21 @@ textarea.gin{height:120px;padding:14px 16px;resize:vertical}
 .home-hero .site-header::before,.site-header::before{background:linear-gradient(180deg,rgba(10,12,14,.55) 0%,rgba(10,12,14,.2) 60%,rgba(10,12,14,0) 100%)}
 .slide-txt h1,.slide-txt .lead,.slide-txt .facts{text-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.35)}
 .geo .m-ctry,.geo .m-city{text-shadow:none}
+
+/* ===== 10 Nov: photos stay bright everywhere; shade only behind text ===== */
+.hero::before,.page-hero::before,.page-hero.compact::before{background:linear-gradient(180deg,rgba(10,12,14,.5) 0%,rgba(10,12,14,.15) 90px,rgba(10,12,14,0) 180px)}
+.blog-page::before,.rv::before,.about-one::before{background:linear-gradient(180deg,rgba(10,12,14,.5) 0%,rgba(10,12,14,.15) 90px,rgba(10,12,14,0) 180px)}
+/* soft shade that follows the text block and fades to nothing */
+.page-hero .inner,.bp-head,.rv-head,.ab-head{position:relative}
+.page-hero .inner::before,.bp-head::before,.rv-head::after,.ab-head::before{content:"";position:absolute;inset:-60px -110px -50px -120px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(10,12,14,.62),rgba(10,12,14,.35) 55%,rgba(10,12,14,0))}
+.page-hero h1,.page-hero .lead,.bp-head h1,.bp-head p,.rv-head h1,.rv-head p,.ab-head h1,.ab-head .sub{text-shadow:0 2px 16px rgba(0,0,0,.5)}
+.page-hero .lead,.bp-head p,.rv-head p{color:rgba(244,237,226,.9)}
+/* glass panels that carry text get their own shade, the photo around them stays clean */
+.blog-page .post,.rv-card{background:rgba(16,20,24,.48);border-color:rgba(244,237,226,.3)}
+.rrow,.rv-overall{background:rgba(16,20,24,.25)}
+.gin{background:rgba(16,20,24,.3)}
+.about-one{background-position:center 30%}
+.ab-left,.ab-right,.ab-contact{background:rgba(16,18,20,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:20px;padding:30px 32px}
+.ab-grid{gap:24px}
+.ab-right{border-left:0;padding-left:32px}
+.ab-contact{margin-top:24px;margin-bottom:56px;border-top:0;padding:24px 32px}
