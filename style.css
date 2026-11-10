@@ -711,3 +711,28 @@ textarea.gin{height:120px;padding:14px 16px;resize:vertical}
 .lang-menu a+a{border-top:1px solid rgba(244,237,226,.28)}
 .lang-menu a.on{color:var(--sand)}
 .lang-menu a:hover{color:var(--sand)}
+
+/* ===== 10 Nov: soft lines that fade out, lighter home hero ===== */
+:root{--ln:rgba(244,237,226,.4);--ln-d:rgba(120,96,64,.35)}
+/* logo: lines start at the word and dissolve outward */
+.logo small::before{background:linear-gradient(90deg,transparent,currentColor);opacity:.8}
+.logo small::after{background:linear-gradient(90deg,currentColor,transparent);opacity:.8}
+/* horizontal hairlines on dark */
+.dropdown a+a,.lang-menu a+a,.ab-left section,.ab-contact,.foot-bottom,.how li,.car .t,.side .summary,.factbar{border-top:1px solid;border-image:linear-gradient(90deg,transparent,var(--ln) 25%,var(--ln) 75%,transparent) 1}
+/* horizontal hairlines on light */
+.acc,.acc details,.why,.hl,.hl div,.block,.card-foot{border-image:linear-gradient(90deg,transparent,var(--ln-d) 20%,var(--ln-d) 80%,transparent) 1}
+/* vertical hairlines */
+.ab-right,.ab-contact .contact-line,.factbar .f+.f,.slide-txt .facts span+span{border-left:1px solid;border-image:linear-gradient(180deg,transparent,var(--ln) 25%,var(--ln) 75%,transparent) 1}
+.why div+div{border-image:linear-gradient(180deg,transparent,var(--ln-d) 25%,var(--ln-d) 75%,transparent) 1}
+.menu>li+li::before{background:linear-gradient(180deg,transparent,rgba(244,237,226,.55),transparent)}
+.rrow .sep{background:linear-gradient(180deg,transparent,rgba(244,237,226,.45),transparent)}
+.ab-title::after{background:linear-gradient(90deg,rgba(244,237,226,.45),transparent)}
+.menu a::after{background:linear-gradient(90deg,transparent,var(--sand),transparent)}
+.rv-head::before{background:linear-gradient(90deg,var(--sand),transparent)}
+.rv-submit p::after{background:linear-gradient(90deg,transparent,var(--sand),transparent);width:120px}
+@media (max-width:1100px){.ab-right,.ab-contact .contact-line{border-left:0}}
+/* home hero: photo stays bright, only a soft fade at the top behind the logo and menu */
+.slide::after{background:linear-gradient(180deg,rgba(10,12,14,.62) 0%,rgba(10,12,14,.25) 12%,rgba(10,12,14,0) 24%)}
+.home-hero .site-header::before,.site-header::before{background:linear-gradient(180deg,rgba(10,12,14,.55) 0%,rgba(10,12,14,.2) 60%,rgba(10,12,14,0) 100%)}
+.slide-txt h1,.slide-txt .lead,.slide-txt .facts{text-shadow:0 2px 18px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.35)}
+.geo .m-ctry,.geo .m-city{text-shadow:none}
