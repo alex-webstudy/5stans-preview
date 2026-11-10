@@ -698,3 +698,16 @@ textarea.gin{height:120px;padding:14px 16px;resize:vertical}
 .blog-page .post:hover .meta .go{color:var(--on-dark)}
 @media (max-width:760px){.blog-page{background-attachment:scroll}}
 .post .tx{display:flex;flex-direction:column}
+
+/* language: compact dropdown */
+.lang-dd{position:relative;display:flex;align-items:center}
+.lang-btn{display:inline-flex;align-items:center;gap:7px;background:none;border:0;color:var(--on-dark);font:400 16px/1 var(--body);letter-spacing:.06em;cursor:pointer;padding:10px 0}
+.lang-btn svg{width:18px;height:18px}
+.lang-btn svg:last-child{width:13px;height:13px;opacity:.8}
+.lang-menu{position:absolute;top:100%;left:50%;padding-top:12px;visibility:hidden;opacity:0;transform:translate(-50%,8px);transition:opacity .25s,transform .25s,visibility .25s;z-index:5}
+.lang-dd:hover .lang-menu,.lang-dd:focus-within .lang-menu{visibility:visible;opacity:1;transform:translate(-50%,0)}
+.lang-menu .dd-in{min-width:150px;display:block}
+.lang-menu a{display:block;padding:12px 4px;font:400 16px/1.2 var(--body);color:var(--on-dark);white-space:nowrap}
+.lang-menu a+a{border-top:1px solid rgba(244,237,226,.28)}
+.lang-menu a.on{color:var(--sand)}
+.lang-menu a:hover{color:var(--sand)}
