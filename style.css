@@ -554,7 +554,7 @@ html[lang="ru"] .menu a::after{left:18px;right:18px}
 .socials-pop a:hover{background:rgba(244,237,226,.14)}
 
 /* home hero: decorative map instead of the card, side arrows, round dots */
-.slide .wrap{grid-template-columns:minmax(0,1fr) 600px;gap:24px;padding-top:80px}
+.slide .wrap{grid-template-columns:minmax(0,1fr) 680px;gap:8px;padding-top:80px}
 .slide-txt .lead{font-size:clamp(22px,2vw,28px)}
 .geo-wrap{align-self:center}
 .geo{width:100%;height:auto;display:block;overflow:visible}
@@ -683,3 +683,18 @@ textarea.gin{height:120px;padding:14px 16px;resize:vertical}
 @media (max-width:620px){.rrow .scale{flex-wrap:wrap}}
 @media (max-width:1100px){.nav-tools{margin-left:auto}}
 @media (max-width:620px){.nav{gap:14px}.logo b{font-size:20px}.logo small{font-size:9px;letter-spacing:.3em}.nav-tools{gap:12px}.lang{font-size:13px;gap:6px}.contact-wrap .btn{height:38px;padding:0 12px;font-size:14px}.contact-wrap .btn svg{display:none}}
+
+/* blog: one photo behind the whole page, glass cards */
+.blog-page{position:relative;color:var(--on-dark);background:var(--ink) center/cover no-repeat fixed;isolation:isolate;padding:150px 0 100px;min-height:100vh}
+.blog-page::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(14,18,22,.5) 0%,rgba(14,18,22,.62) 35%,rgba(14,18,22,.72) 100%)}
+.bp-head{display:grid;gap:12px;margin-bottom:40px;max-width:900px}
+.bp-head .eyebrow{color:var(--sand)}
+.bp-head h1{font-size:clamp(40px,4.4vw,60px)}
+.bp-head p{font-size:20px;color:var(--on-dark-muted)}
+.blog-page .post{background:rgba(120,128,132,.16);border:1px solid rgba(244,237,226,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.blog-page .post:hover{box-shadow:0 22px 44px -24px rgba(0,0,0,.6);border-color:rgba(244,237,226,.5)}
+.blog-page .post .cat{color:var(--sand)}
+.blog-page .post .meta,.blog-page .post .meta .go{color:var(--on-dark-muted)}
+.blog-page .post:hover .meta .go{color:var(--on-dark)}
+@media (max-width:760px){.blog-page{background-attachment:scroll}}
+.post .tx{display:flex;flex-direction:column}
